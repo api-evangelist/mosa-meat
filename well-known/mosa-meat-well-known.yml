@@ -1,0 +1,80 @@
+generated: '2026-08-26'
+method: probed
+source: https://mosameat.com/.well-known/
+note: >-
+  Every /.well-known/ path probed on the only host Mosa Meat operates returned a real
+  HTTP 404. The site is a Squarespace-hosted marketing site and it is NOT a soft-404
+  catch-all: a control probe of an invented path returned 404 as well, so these are
+  genuine absences rather than a host answering 200 to everything. No WellKnown and
+  no SecurityTxt pointer is emitted, because nothing was served. Recorded absence,
+  not a gap in the probe.
+hit_count: 0
+hosts:
+- host: https://mosameat.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+    note: 'Squarespace platform response body: {"message":"security.txt not found"}'
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+soft_404_control:
+  path: /this-path-should-not-exist-12345
+  status: 404
+  bytes: 418500
+  content_type: text/html;charset=utf-8
+  verdict: >-
+    Host returns a true 404 status for unknown paths, so the 404s above are trustworthy
+    negatives and no catch-all 200 inflation is possible here.
+contract_discovery:
+  note: >-
+    STEP 0b run in full against the only host this company controls. No REST OpenAPI,
+    no GraphQL endpoint, no MCP server, and no A2A agent card. Mosa Meat publishes no
+    API host, developer subdomain, or docs subdomain.
+  probes:
+  - url: https://mosameat.com/openapi.json
+    status: 404
+  - url: https://mosameat.com/openapi.yaml
+    status: 404
+  - url: https://mosameat.com/swagger.json
+    status: 404
+  - url: https://mosameat.com/v1/openapi.json
+    status: 404
+  - url: https://mosameat.com/api-docs
+    status: 404
+  - url: https://mosameat.com/docs
+    status: 404
+  - url: https://mosameat.com/redoc
+    status: 404
+  - url: https://mosameat.com/graphql
+    status: 404
+  - url: https://mosameat.com/llms.txt
+    status: 404
+  - url: https://api.mosameat.com/
+    status: 0
+    note: DNS does not resolve
+  - url: https://developer.mosameat.com/
+    status: 0
+    note: DNS does not resolve
+  - url: https://docs.mosameat.com/
+    status: 0
+    note: DNS does not resolve
+  - url: https://api.github.com/orgs/mosameat
+    status: 404
+    note: No GitHub organization under mosameat, mosa-meat, or MosaMeat

@@ -1,17 +1,35 @@
 aid: mosa-meat
 name: Mosa Meat
-description: 'Mosa Meat is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Mosa Meat is a European food technology company headquartered in Maastricht,
+  the Netherlands, founded in 2016 as a spin-off of Maastricht University by Mark Post
+  and Peter Verstrate. The company develops cultivated (cell-cultured) beef using cellular
+  agriculture: a small cell sample taken from a cow is nurtured through natural processes
+  into muscle and fat tissue, which the company states can yield up to 80,000 burgers
+  from a single sample. Mosa Meat produced the world''s first cultured beef hamburger
+  in 2013 and now operates the Mosa C.A.M.P.U.S. (Center for Advanced Meat Production,
+  Upscaling, and Sustainability) in Maastricht, reported as the largest cultivated meat
+  campus in the world. It is a B Corp certified organization pursuing regulatory approval
+  and market entry for cultivated beef burgers. Mosa Meat is a laboratory and food
+  production business; it publishes no developer program, public API, or machine-readable
+  API contract.'
 url: https://raw.githubusercontent.com/api-evangelist/mosa-meat/refs/heads/main/apis.yml
+image: http://static1.squarespace.com/static/5f58b0094108a94a07e7dbd2/t/650d53aebdd64a47a823c81c/1695372211924/LinkedIn+Banner+2023.png?format=1500w
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass-completed-no-api-surface
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Food Technology
+- Cultivated Meat
+- Cellular Agriculture
+- Biotechnology
+- Agriculture
+- Sustainability
+- Netherlands
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,46 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/mosa-meat-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://mosameat.com/
+- type: Blog
+  url: https://mosameat.com/blog
+- type: BlogRSS
+  url: https://mosameat.com/blog?format=rss
+- type: PrivacyPolicy
+  url: https://mosameat.com/privacy-policy
+- type: Contact
+  url: https://mosameat.com/contact
+- type: FAQ
+  url: https://mosameat.com/faq
+- type: Careers
+  url: https://mosameat.com/careers
+- type: PressKit
+  url: https://mosameat.com/press-kit
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Mosa Meat is a cultivated-beef manufacturer whose entire web presence is a 101-page
+    Squarespace marketing site (blog, careers, FAQ, press kit, investor page) with no
+    developer section, no api/developer/docs subdomain resolving in DNS, and no GitHub
+    organization under any spelling of the name.
+  evidence:
+  - url: https://mosameat.com/openapi.json
+    status: 404
+  - url: https://mosameat.com/.well-known/agent-card.json
+    status: 404
+  - url: https://mosameat.com/llms.txt
+    status: 404
+  - url: https://api.github.com/orgs/mosameat
+    status: 404
+  - url: https://mosameat.com/
+    status: 200
+  checked: '2026-08-26'
