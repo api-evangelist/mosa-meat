@@ -13,6 +13,17 @@ description: 'Mosa Meat is a European food technology company headquartered in M
   production business; it publishes no developer program, public API, or machine-readable
   API contract.'
 url: https://raw.githubusercontent.com/api-evangelist/mosa-meat/refs/heads/main/apis.yml
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: http://static1.squarespace.com/static/5f58b0094108a94a07e7dbd2/t/650d53aebdd64a47a823c81c/1695372211924/LinkedIn+Banner+2023.png?format=1500w
 x-type: company
 x-source: harvest:secondary-market
