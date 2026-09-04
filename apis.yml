@@ -24,6 +24,18 @@ deliveryModel:
   - none
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: http://static1.squarespace.com/static/5f58b0094108a94a07e7dbd2/t/650d53aebdd64a47a823c81c/1695372211924/LinkedIn+Banner+2023.png?format=1500w
 x-type: company
 x-source: harvest:secondary-market
