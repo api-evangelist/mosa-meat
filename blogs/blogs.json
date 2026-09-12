@@ -2,6 +2,13 @@
   "repo": "mosa-meat",
   "feeds": [
     {
+      "source": "https://mosameat.com/blog",
+      "feed_url": "https://mosameat.com/blog/atom.xml",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    },
+    {
       "source": "https://mosameat.com/",
       "feed_url": "https://mosameat.com/",
       "title": "",
@@ -9,13 +16,13 @@
       "method": "none"
     },
     {
-      "source": "https://mosameat.com/blog",
+      "source": "https://mosameat.com/blog?format=rss",
       "feed_url": "https://mosameat.com/blog?format=rss",
       "title": "",
       "saved": 0,
-      "method": "discovered"
+      "method": "feed"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-08-30T22:33:40Z"
+  "post_count": 20,
+  "fetched": "2026-09-06T19:17:18Z"
 }
